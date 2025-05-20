@@ -8,18 +8,16 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('ketuas', function (Blueprint $table) {
+        Schema::create('category_users', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('category_id')->constrained()->onDelete('cascade');
-            $table->string('link');
-            $table->string('name')->nullable();
-            $table->boolean('status')->default(true);
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->string('name');
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('ketuas');
+        Schema::dropIfExists('category_users');
     }
 };

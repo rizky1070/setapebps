@@ -11,19 +11,26 @@ class Link extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+    'name',
+    'link',
+    'category_user_id',
+    'user_id'
+    ];
+
     protected $guarded = ['id'];
+
+    protected $casts = [
+        'status' => 'boolean',
+    ];
 
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id', 'id');
     }
     
-    public function category()
+    public function categoryUser()
     {
-        return $this->belongsTo(CategoryUser::class, 'category_user_id', 'id');
-    }
-    public function status()
-    {
-        return $this->belongsTo(status::class, 'status', 'id');
+        return $this->belongsTo(CategoryUser::class);
     }
 }
