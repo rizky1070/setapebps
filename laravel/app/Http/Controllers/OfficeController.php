@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Office;
 use App\Models\Category;
-use Auth;
-use Session;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 
 class OfficeController extends Controller

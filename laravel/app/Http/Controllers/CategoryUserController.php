@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\CategoryUser;
-use Auth;
-use Session;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 
 class CategoryUserController extends Controller
