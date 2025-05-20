@@ -40,7 +40,7 @@
 					</div>
 						<div class="form-group">
                     <label for="judul">Kategori</label>
-                    <select class="form-control" name="category_id" id="">
+                    <select class="form-control" name="category_user_id" id="">
                         @php
                             $sortedCategories = $category->sortBy('name');
                         @endphp

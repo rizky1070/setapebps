@@ -42,7 +42,7 @@
 <tr id="row-{{$row->id}}">
 <th class="text-center" id="row">{{ $loop->iteration }}.</th>
 <th>{{ $row->name }}</th>
-<th>{{ $row->category->name }}</th>
+<th>{{ $row->CategoryUser?->name ?? '-' }}</th>
 <td> <a class="btn btn-sm btn-{{ $row->status ? 'success' : 'danger' }}">
                     {{ $row->status ? 'Ya' : 'Tidak' }}</a> </td>
 
